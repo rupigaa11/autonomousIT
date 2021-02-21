@@ -1,0 +1,5 @@
+{ 
+    "accessKeyId": "your-accessKey-here", 
+    "secretAccessKey": "your-secretaccesskey-here", 
+    "region": "ap-south-1" 
+}
