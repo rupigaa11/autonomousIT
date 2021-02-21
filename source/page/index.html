@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>Autonomous IT</title>
+        <style type="text/css">
+
+            .stextbox
+            {
+                height:30px;
+                width:100%;
+                margin-bottom: 10px;
+            }	
+            .text-styling{
+                color: rgb(49, 49, 49);
+                margin-bottom: 4px;
+            }
+            .form{
+                width: 100%;
+                padding: 8px 10px;
+                margin-bottom:5px;
+                margin-top:10px;
+                box-sizing: border-box;
+                color: rgb(182, 182, 182);
+                
+
+            }
+            p{
+                margin-top: 10px;
+                color: rgb(41, 41, 41);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:14;
+            }
+            .label{
+                margin-top: 10px;
+                color: rgb(41, 41, 41);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:14;
+            }
+            input[type=password] {
+                width: 100%;
+                padding: 8px 10px;
+                margin-bottom:5px;
+                box-sizing: border-box;
+                color: rgb(182, 182, 182);
+                
+            }
+        </style>
+    </head>
+    <body style="margin:0px;">
+        <div>
+            <!-- Header -->
+            <div style="height: 50px;width: 100%;background-color:white;display: flex;align-items:center;box-shadow: 0px 15px 10px -15px rgba(163, 163, 163, 0.473);justify-content: space-between;">
+                <!-- <img src="aws.png" style="height: 30px;padding-left: 150px;"> -->
+                <label style="
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:16;padding-left: 150;margin-top: 0px;font-weight: bold;margin-right: 160px;justify-self: flex-end;">Autonomous IT</label>
+                
+            </div>
+            <form method='post' action='/submit'>
+            <h3 style="font-weight:bolder;font-family: Arial, Helvetica, sans-serif; padding:30px 150px;">Specify stack details</h3>
+            <div style="display: flex;justify-content: center;align-items: center;">
+
+            
+            <div style="display: flex; flex-direction: row;width: 80%;">
+                <div style="display: flex;flex-direction: column;">
+                    <div style="display: flex;flex-direction: column;border: 1px solid rgb(211, 211, 211);margin-bottom: 10px;">
+                        <div style="padding:0px 20px; background-color: #89c4f43b;">
+                            <h4 style="font-family: Arial, Helvetica, sans-serif;">Stack Name</h4>
+                        </div>
+                        <div style="display: flex;flex-direction: column;background-color: white;padding: 10px 20px;">
+                            <label for="stack">Stack Name</label>
+                            <input type="text" placeholder="Stack Name" id="stack" name="stack" class="form">
+                            <p style="color:rgb(168, 161, 161) ;font-size: 12px;">
+                                The stack name is an identifier that helps you find a particular stack from a list of stacks. 
+                                It can include letters (A-Z and a-z), numbers (0-9), and dashes (-).</p>
+                        </div>
+    
+                    </div>
+                    <div style="display: flex;flex-direction: column;border: 1px solid rgb(211, 211, 211);margin-bottom: 10px;">
+                        <div style="padding:0px 20px; background-color: #89c4f43b;">
+                            <h4 style="font-family: Arial, Helvetica, sans-serif;margin-bottom: 0px;">Parameters</h4>
+                            <p style="font-size:12px;">
+                                Parameters enables us to input custom values to your template each time you create or update a stack.
+                            </p>
+                        </div>
+                        <div style="display: flex;flex-direction: column;background-color: white;padding: 10px 20px;">
+                            <label for="instance" class="label">Instance Type</label>
+                            <input type="text" placeholder="Instance Type" id="instance" name="instance" class="form">
+                            <label for="key" class="label">Key Pair Name</label>
+                            <input type="text" placeholder="Key Name" id="key" name="key" class="form">
+                            <label for="ssh" class="label">SSH Location</label>
+                            <input type="text" placeholder="SSH Location" id="ssh" name="ssh" class="form">
+                            
+                            
+                        </div>
+    
+                    </div>
+                </div>
+                <div style="display: flex;flex-direction: column; margin-left: 10px;width: 45%;">
+                    <div style="display: flex;flex-direction: column;border: 1px solid rgb(211, 211, 211);margin-bottom: 10px;padding-bottom: 20px;">
+                        <div style="padding:0px 20px; background-color: #89c4f43b;">
+                            <h4 style="font-family: Arial, Helvetica, sans-serif;margin-bottom: 0px;margin-top: 10px;">Database Parameters</h4>
+                            <p style="font-size:12px;margin-top: 5px;">Configure wordpress database name, users and password.</p>
+                        </div>
+                        <div style="display: flex;flex-direction: column;background-color: white;padding: 10px 20px;">
+                            <label for="databasename" class="label">Database Name</label>
+                            <input type="text" placeholder="Database Name" id="databasename" name="databasename" class="form">
+                            <label for="databaseuser" class="label">Database User</label>
+                            <input type="text" placeholder="Database User" id="databaseuser" name="databaseuser" class="form">
+                            <label for="databasepassword" class="label">Database Password</label>
+                            <input type="text" placeholder="Database Password" id="databasepassword" name="databasepassword" class="form">
+                            <label for="rootpassword" class="label">Database Root Password</label>
+                            <input type="text" placeholder="Database Root Password" id="rootpassword" name="rootpassword" class="form">
+                            
+                            
+                        </div>
+    
+                    </div>
+                    <div style="display:flex; flex-direction: row; justify-content: space-evenly;">
+                        <input type="submit" value="Create Stack" style="background-color: #F47983;width: 250px;height: 40px;border: none;color: white;font-weight: bold;font-size: 16px;margin: 10px;">
+                        <input type="button" value="Cancel" style="background-color: #F47983;width: 250px;height: 40px;border: none;color: white;font-weight: bold;font-size: 16px;margin: 10px;">
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        </form>
+        </div>
+    </body>
+</html>
